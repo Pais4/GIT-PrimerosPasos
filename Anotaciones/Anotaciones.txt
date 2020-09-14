@@ -30,8 +30,18 @@
         - :wq
     
 -> Etiquetas - TAG
+    - git tag -a 0.5 -m "Version estable" (Para agregar un tag con mensaje)
+    - git tag -l (Para listar los tags)
+    - git tag 1.2 SHA-1-de-version-anterior-o-posterior (Ej: 9e1f207ece162208f8d77fdcd3bb90293913c8e0) (Para ponerle un tag a una version que no tenia)
+    - git tag -d 1.0 (Borra el tag)
+    - git tag -f -a 0.1 -m "Iniciando el proyecto" 9e1f207ece162208f8d77fdcd3bb90293913c8e0 (Sirve para modificar y renombrar la version)
 
 -> Seguimiento de los repositorios
     - git log (Informacion sobre el repositorio)
+        - Personalizando el log
+            - git log --oneline
+            - git log --oneline --graph
+    - git diff 1.0 1.1(Muestra las diferencias que ocurrieron entre un cambio u otro)
+        - o tambien git diff 8297453
     - git checkout firma -> Sirve para cambiar a algun estado del pasado
     - git remote -v (ver que repositorio esta asociado)
