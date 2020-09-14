@@ -1,0 +1,37 @@
+-> Los 3 estados de GIT
+    - Working Directory: Es donde trabajamos de manera local, pero
+    para guardarlo hay que pasarlo al Staging Area.
+    - Staging Area: Es el area de preparacion, se almacena
+    justo antes de hacer el commit
+    - Git Repository: El repositorio donde almacenaremos los 
+    cambios del proyecto.
+
+-> Comandos para la terminal
+    - mkdir: Crear carpeta
+    - touch: Crear archivos
+    - rm: Remover un archivo 
+    - rm -rf: Remover folder
+    - vim: Sirve para editar archivos desde la terminal
+        - Para cerrar y guardar (Esc) + :wq (Write & quit)
+        - :q! Para salir sin guardar
+
+-> Creando el primer repositorio
+    - git init o git init nombre_carpeta 
+    - git status
+        - Muestra todos los archivos que estan en el working directory (untracked)
+
+-> Subiendo el archivo al Staging area
+    - git add nombreArchivo o git add .
+        - git add -A (all -> Todos los archivos sin importar en que ubicacion se este, que esten listos para ser agregados)
+    - git rm --cached archivo (Sirve para borrar algun archivo que se haya añadido al staging area)
+    - git rm -f archivo (Realiza un borrado forzoso de algun archivo que se haya añadido al staging)
+    - git commit -m "mensaje" 
+    - git commit --amend (opcional->) -m "mensaje" (Nos ayuda a concatenar un cambio con uno previo del mismo commit, la parte del mensaje es opcional)
+        - :wq
+    
+-> Etiquetas - TAG
+
+-> Seguimiento de los repositorios
+    - git log (Informacion sobre el repositorio)
+    - git checkout firma -> Sirve para cambiar a algun estado del pasado
+    - git remote -v (ver que repositorio esta asociado)
