@@ -36,6 +36,19 @@
     - git tag -d 1.0 (Borra el tag)
     - git tag -f -a 0.1 -m "Iniciando el proyecto" 9e1f207ece162208f8d77fdcd3bb90293913c8e0 (Sirve para modificar y renombrar la version)
 
+-> Trabajando con RAMAS
+    - git checkout -b nombreRama (Creamos una rama y navegamos a ella de una vez)
+    - git checkout nombreRama (Con este nos movemos a la rama)
+    - git branch nombre (Crear la rama)
+    - git branch -l (Lista las ramas)
+    - git branch -d nombre (Elimina una rama)
+        - git branch -D nombre (Forzar el borrado del repositorio)
+    - git branch -m nombreViejo nombreNuevo (Renombrar una rama)
+
+-> MERGE entre ramas
+    - Estando ubicados en la rama master
+        - git merge rama (Mezclamos la master con la rama que queramos)
+
 -> Seguimiento de los repositorios
     - git log (Informacion sobre el repositorio)
         - Personalizando el log
@@ -45,3 +58,8 @@
         - o tambien git diff 8297453
     - git checkout firma -> Sirve para cambiar a algun estado del pasado
     - git remote -v (ver que repositorio esta asociado)
+
+-> Para hacer un reset
+    - git reset --soft sha-1  (Elimina los cambios hasta el staging area)
+    - git reset --mixed sha-1 (Quita los commit y los archivos que estaban en el commit del stage)
+    - git reset --hard sha-1
