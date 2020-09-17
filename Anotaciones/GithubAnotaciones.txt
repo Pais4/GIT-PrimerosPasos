@@ -1,0 +1,26 @@
+-> FORK
+    - Si no soy dueño del proyecto y no lo queremos clonar, sino hacerle modificaciones para aportarle al proyecto, 
+    el fork clona el proyecto y agrega directamente un proyecto a mi github
+
+-> GENERANDO LLAVES SSH
+    - 
+
+-> AÑADIENDO REPOSITORIO REMOTO
+    - git remote add [Nombre] [Ruta] (Por convencion se llama origin)
+    - Si el repositorio tiene archivos como el README.MD tenemos que acoplar estos archivos al repo local 
+
+        - Fetch ->  git fetch origin master
+                    Luego mezclamos los datos con la master
+                    git merge origin/master --allow-unrelated-histories <- Mezclamos con nuestra master
+        - Pull ->   Hace el fecth y el merge al mismo tiempo Es mas eficiente
+                    git pull origin master
+
+    - git remote remove [Nombre] (Para remover un repositorio)
+    - git remote -v (Muestra las rutas asociadas a el repositorio)
+
+-> ENVIANDO LOS CAMBIOS AL REPOSITORIO REMOTO
+    - git push origin master
+    - Si queremos enviar los tags 
+        - git push origin master --tags
+    -Para enviarlo a otra rama
+        - git push origin [nombre_rama]
