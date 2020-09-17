@@ -47,7 +47,29 @@
 
 -> MERGE entre ramas
     - Estando ubicados en la rama master
-        - git merge rama (Mezclamos la master con la rama que queramos)
+        - Primer merge -> git merge rama (Mezclamos la master con la rama que queramos)
+        - Merge recursivo -> Nos obliga a hacer un commit y salimos :q
+        - Merge con conflictos -> Tenemos que arreglar manualmente lo que necesitamos y lo que no
+        y ya hacemos el commit para que el merge se ejecute.
+    - git rebase rama (Hace lo mismo que el merge solo que no crea bifurcaciones, commits innecesarios, pero es mas riesgoso)
+
+-> STASH -> Estado intermedio, es otro limbo como el stage
+    - git stash
+        (Usamos el stash si estamos trabajando en una rama y necesitamos pasar a otra para hacer 
+        un hotfix o algo por el estilo, pero no queremos pasar lo que tenemos ahora ni hacer un commit, 
+        lo que tengamos queda guardado temporalmente sin necesidad de subirlo)
+    - git stash list (Podemos ver los stash que tenemos)
+    - git stash drop stash@{1} (Elimina un stash)
+    - git stash apply (Con esto aplicamos el ultimo cambio que hayamos realizado)
+        - git stash apply stash@{2} (Aplicamos un cambio en especifico)
+
+-> CHERRY PICK - Escogiendo commits selectivamente para sacarlos de algun lugar
+    - Este comando nos ayuda a sacar un commit en especifico de una rama y ponerlo en 
+    la rama que lo necesitemos.
+    - git checkout -b hotfix2
+        - (Aqui pasamos el commit que necesitamos)
+    - git cherry-pick sha-1
+    - Con esto ya sacamos el commit de una rama y lo pusimos en la que lo necesitabamos
 
 -> Seguimiento de los repositorios
     - git log (Informacion sobre el repositorio)
